@@ -1,65 +1,70 @@
-:root{
+:root {
     --dark-overlay: #3292a6;
 }
 
+body {
+    margin-top: 105px;
+}
 
-.navbar{
+.navbar {
     opacity: 0.9;
 }
-.mine-logo{
-    width: 50px;
-}   
 
-.nav-link{
+.mine-logo {
+    width: 50px;
+}
+
+.nav-link {
     font-size: 1.3 rem;
 }
 
-#home{
+#home {
     position: relative;
-    background: url(../img/mountains.jpg) no-repeat center center/cover;
-    height:70vh;
-    margin-top: 78px;
-    opacity: 0.6;
+    background: url("../img/mountains.jpg");
+    height: 80vh;
 }
 
-.dark-overlay{
-    height:100%;
+#home .dark-overlay {
+    background: rgba(50, 146, 166, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.book-poster {
+    height: 72%;
+}
+
+#btn-subs {
     background-color: var(--dark-overlay);
-    opacity: 0.6;
 }
 
-.book-poster{
-    height: 62%;
-}
-
-#btn-subs{
-    background-color: var(--dark-overlay);
-}
-
-.mine-border{
+.mine-border {
     border-color: var(--dark-overlay);
 }
 
-.text-mine{
+.text-mine {
     color: var(--dark-overlay);
 }
 
-.bg-mine{
+.bg-mine {
     background-color: var(--dark-overlay);
 }
 
-.card-img-top{
+.card-img-top {
     border-radius: 50%;
     width: 120px;
 }
 
-.img-mine{
+.img-mine {
     display: flex;
     justify-content: center;
     margin-top: -50px;
 }
 
-.hover:hover{
+.hover:hover {
     background-color: var(--dark-overlay);
     color: white;
 }
