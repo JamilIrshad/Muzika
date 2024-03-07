@@ -12,10 +12,10 @@
     <title>Muzika</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-scroll">
 
     <!-- Navbar -->
-    <nav class='navbar navbar-expand-md bg-light navbar-light fixed-top pd-4'>
+    <nav class='navbar navbar-expand-md bg-light navbar-light fixed-top pd-4' id="navbar-scroll">
         <div class="container">
             <a href="#" class="navbar-brand m-0 fw-bold">
                 <img src="./img/mlogo.png" class="mine-logo" alt="">
@@ -33,16 +33,24 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#home" class="nav-link active" aria-current="true">
+                            <h5>Home</h5>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">
+                            <h5>About</h5>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Meet the Authors</a>
+                        <a href="#meet" class="nav-link">
+                            <h5>Meet the Authors</h5>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">
+                            <h5>Contact</h5>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -55,8 +63,8 @@
         <div class="dark-overlay">
             <div class="container text-light text-center z-index-5">
                 <div class="row">
-                    <div class="col-md-6 mt-5">
-                        <h1 class="display-2 pt-4 typewrite">Do what you dream of...</h1>
+                    <div class="col-md-6">
+                        <h1 class="display-2 pt-4 ">Do what you dream of...</h1>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolor.</p>
 
                         <button class="btn btn-lg btn-outline-secondary text-light border-white"><i
@@ -84,7 +92,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <button class="btn btn-lg btn-block w-100 text-black" id="btn-subs">
+                    <button class="btn btn-lg btn-block w-100 text-black btn-mine" id="btn-subs">
                         Subscribe
                     </button>
                 </div>
@@ -213,7 +221,7 @@
                     </div>
                 </div>
             </div>
-            
+
     </section>
 
 
@@ -239,10 +247,11 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <div class="mt-5">
-                                <i class="fa-brands fa-facebook text-white"></i>
-                                <i class="fa-brands fa-twitter mx-4 text-white"></i>
-                                <i class="fa-brands fa-instagram text-white"></i>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4"><a href=""><i class="fa-brands fa-facebook text-white"></i></a></div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-twitter mx-4 text-white"></i></a>
+                                </div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-instagram text-white"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -260,10 +269,11 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <div class="mt-5">
-                                <i class="fa-brands fa-facebook text-white"></i>
-                                <i class="fa-brands fa-twitter mx-4 text-white"></i>
-                                <i class="fa-brands fa-instagram text-white"></i>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4"><a href=""><i class="fa-brands fa-facebook text-white"></i></a></div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-twitter mx-4 text-white"></i></a>
+                                </div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-instagram text-white"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -281,10 +291,11 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <div class="mt-5">
-                                <i class="fa-brands fa-facebook text-white"></i>
-                                <i class="fa-brands fa-twitter mx-4 text-white"></i>
-                                <i class="fa-brands fa-instagram text-white"></i>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4"><a href=""><i class="fa-brands fa-facebook text-white"></i></a></div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-twitter mx-4 text-white"></i></a>
+                                </div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-instagram text-white"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -302,10 +313,11 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <div class="mt-5">
-                                <i class="fa-brands fa-facebook text-white"></i>
-                                <i class="fa-brands fa-twitter mx-4 text-white"></i>
-                                <i class="fa-brands fa-instagram text-white"></i>
+                            <div class="d-flex justify-content-center">
+                                <div class="p-4"><a href=""><i class="fa-brands fa-facebook text-white"></i></a></div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-twitter mx-4 text-white"></i></a>
+                                </div>
+                                <div class="p-4"><a href=""><i class="fa-brands fa-instagram text-white"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -315,22 +327,55 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-pd-9">
+                <div class="col-lg-9">
                     <h3>Get in touch</h3>
                     <p class="lead">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero in enim consequatur, fuga eum
-                        reprehenderit.
+                        Contact us for any queries and we will be happy to help you.
                     </p>
+
+                    <!-- Contact US Form -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"> <i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="input-group mb-3">
+                            <span class="input-group-text"> <i class="fas fa-pencil-alt"></i></span>
+                            <textarea placeholder="Your Message" rows="5" class="form-control"></textarea>
+                    </div>
+
+                    <button class="btn btn-mine btn-lg btn-block w-100 text-white" id="btn-contact">
+                        Submit
+                    </button>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3">
 
                 </div>
             </div>
         </div>
     </section>
+
+    <footer id="footer" class="bg-mine py-2 text-white">
+        <div class="container">
+            <div class="row text-end">
+                <div class="col-md">
+                    <p class="lead">
+                        Copyright &copy;
+                        <span id="year"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
 
     <!-- Javascript bundle with popper -->
