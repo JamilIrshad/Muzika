@@ -14,6 +14,25 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-scroll">
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <img src="./img/404-tick.png" class="popupimage">
+                    <h1 class="modal-title fs-4 mt3" id="exampleModalLabel">Thank You!</h1>
+                </div>
+                <div class="modal-body">
+                    You have successfully subscribed to our newsletter. Thank you for your interest in our book.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-mine text-light" data-bs-dismiss="modal" data-bs-target="#exampleModal">Acknowledge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class='navbar navbar-expand-md bg-light navbar-light fixed-top pd-4' id="navbar-scroll">
         <div class="container">
@@ -91,7 +110,7 @@
                 </div>
                 <div class="col-md-4">
                     <button type="submit" class="btn btn-secondary btn-lg btn-block w-100 text-black btn-mine"
-                        id="news_submit">
+                        id="news_submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Subscribe
                     </button>
                 </div>
@@ -337,12 +356,12 @@
 
                     <!-- Contact US Form -->
                     <form action="https://api.web3forms.com/submit" method="POST">
-                        
+
                         <!-- Required for the API -->
                         <input type="hidden" name="access_key" value="5208a34c-ff4f-4553-a3ac-ecdd64324be0">
                         <input type="hidden" name="subject" value="New customer query for Muzika">
                         <input type="hidden" name="from_name" value="Muzika Help Desk">
-                        
+
                         <!-- Form fields -->
                         <div class="input-group mb-3">
                             <span class="input-group-text"> <i class="fas fa-user"></i></span>
@@ -356,7 +375,8 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text"> <i class="fas fa-pencil-alt"></i></span>
-                            <textarea placeholder="Your Message" rows="5" class="form-control" name="message" required></textarea>
+                            <textarea placeholder="Your Message" rows="5" class="form-control" name="message"
+                                required></textarea>
                         </div>
 
                         <!-- hCaptcha Spam Protection -->
