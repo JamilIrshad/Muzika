@@ -25,17 +25,19 @@ A website made using a template by Bootstrap. Built from scratch.
 To run this project locally, clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
+git clone https://github.com/jamilirshad/Muzika
 cd portfolio-website
 open index.html
 
-```markdown
+```
+
+
 
 # Muzika book Website
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://your-netlify-url)
 
-Live Demo: [https://your-netlify-url](https://your-netlify-url)
+Live Demo: [[https://your-netlify-url](https://your-netlify-url)](https://silly-parfait-3a189e.netlify.app/)
 
 ...
 
