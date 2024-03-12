@@ -35,9 +35,9 @@ open index.html
 
 # Muzika book Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://your-netlify-url)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c8076d79-69e9-4bdb-87e3-0f68608b659d/deploy-status)](https://app.netlify.com/sites/silly-parfait-3a189e/deploys)
 
-Live Demo: [[https://your-netlify-url](https://your-netlify-url)](https://silly-parfait-3a189e.netlify.app/)
+Live Demo: https://silly-parfait-3a189e.netlify.app/
 
 ...
 
