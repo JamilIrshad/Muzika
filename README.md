@@ -1,6 +1,6 @@
 # Muzika Book Website
 
-![Website Screenshot](./screenshot.png)
+![Website Screenshot](./img/screenshot.png)
 
 ## Introduction
 
@@ -18,7 +18,12 @@ A website made using a template by Bootstrap. Built from scratch.
 - CSS3
 - JavaScript
 - Bootstrap
-- AWS Cloud
+- AWS Cloud (Lambda, API Gateway, DynamoDB, IAM, CloudWatchLogs)
+
+## Architecture Diagram
+
+![Architecture Diagram](./img/architecture.png)
+
 
 ## Setup
 
@@ -31,6 +36,49 @@ open index.html
 
 ```
 
+The python code for the Lambda Function which is triggered by the API call in index.js
+
+```python
+import json
+import boto3
+import uuid
+
+# Initialize the DynamoDB client
+dynamodb = boto3.resource('dynamodb')
+
+def lambda_handler(event, context):
+    try:
+        # Parse name and email from the event
+        name = event['name']
+        email = event['email']
+
+        # Generate a UUID
+        unsubscription_id = str(uuid.uuid4())
+
+        # Get the table
+        table = dynamodb.Table('muzika-newsletter')
+
+        # Put the new subscription into the DynamoDB table
+        response = table.put_item(
+            Item={
+                'unsubscription_id': unsubscription_id,
+                'name': name,
+                'email': email
+            }
+        )
+
+        # Return a success response
+        return {
+            'statusCode': 200,
+            'body': json.dumps('Subscription added successfully!')
+        }
+    except Exception as e:
+        # Return an error response
+        return {
+            'statusCode': 500,
+            'body': json.dumps(f'Error adding subscription: {str(e)}')
+        }
+```
 
 
 # Muzika book Website

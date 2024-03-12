@@ -37,6 +37,11 @@ body {
     height: 80%;
 }
 
+.mb-resp {
+    margin-bottom: 1rem;
+  }
+
+
 .btn-mine {
     background-color: var(--dark-overlay);
 }
