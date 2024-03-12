@@ -13,7 +13,8 @@ document.querySelector('#news_submit').addEventListener('click', async function 
     let news_name = document.querySelector('#news_name').value;
     let news_email = document.querySelector('#news_email').value;
 
-    const response = await fetch( API_URL, {
+    //Custom API Gateway URL
+    const response = await fetch(API_URL, {
       method: 'POST',
       body: JSON.stringify({
         name: news_name,
