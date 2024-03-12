@@ -2,20 +2,28 @@
 var year = document.getElementById("year");
 year.innerHTML = new Date().getFullYear();
 
-//Contact US form handling
+// Functionality for AWS API
+var form = document.getElementById("newsletterForm");
 
+// Functionality for AWS API
+document.querySelector('#news_submit').addEventListener('click', async function (event) {
+  event.preventDefault();
 
+  try {
+    let news_name = document.querySelector('#news_name').value;
+    let news_email = document.querySelector('#news_email').value;
 
-Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "username",
-    Password : "password",
-    To : 'them@website.com',
-    From : "you@isp.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+    const response = await fetch('https://i2j5bmtggl.execute-api.ap-south-1.amazonaws.com/production/newsletter', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: news_name,
+        email: news_email,
+      }),
+    });
 
-
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
